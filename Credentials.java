@@ -6,7 +6,7 @@ package model;
 
 /**
  *
- * @author neha
+ * @author nehajoisher
  */
 public class Credentials {
     private String username;
