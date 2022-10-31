@@ -84,10 +84,7 @@ public class CredentialDirectory{
     
     public boolean checkHospAdminCred(String username,String password, String role)
     {
-        System.out.println("FUNCTION " + username + " " + password);
         ArrayList<Credentials> searchCredentials = new ArrayList();
-        System.out.println("FUNCTION " + username + " " + password + " ");
-        //System.out.println(credential.);
         for(Credentials credentials1: credential)
         {
            
