@@ -41,23 +41,6 @@ public class City{
     public void setAllcommunities(ArrayList<Community> allcommunities) {
         this.allcommunities = allcommunities;
     }
-
-//    public ArrayList<Hospital> getAllhosp() {
-//        return allhospitals;
-//    }
-//
-//    public void setAllhosp(ArrayList<Hospital> hospdir) {
-//        this.allhospitals = hospdir;
-//    }
-//    
-//    public ArrayList<Community> getCommunity1() {
-//        return allcommunities;
-//    }
-//
-//    public void setCommunity1(ArrayList<Community> Community1) {
-//        this.allcommunities = Community1;
-//    }
-    //private House house;
     public City() {
         this.cityname = "";
         this.cityId = 0;
@@ -65,14 +48,6 @@ public class City{
         this.allhospitals = new ArrayList<>();
         //this.community = "";
     }
-
-//    public House getHouse() {
-//        return house;
-//    }
-//
-//    public void setHouse(House house) {
-//        this.house = house;
-//    }
 
     public Community getCommunity() {
         return community;
@@ -159,14 +134,7 @@ public class City{
             }
         }
         return searchHospital;
-    }
-
-
-    
-//    @Override  
-//    public String toString(){
-//        return City.super.getCity().getCityname();
-//    }        
+    }     
     
     
     public boolean checkcommid(int id)
@@ -187,7 +155,7 @@ public class City{
         }else{
             return true;
         }
-        //return searchEmployee;
+       
     }      
     
     @Override  
