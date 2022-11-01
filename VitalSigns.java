@@ -1,50 +1,51 @@
+/*
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
+ */
 package model;
 
+import java.util.ArrayList;
+import java.util.Date;
+
+/**
+ *
+ * @author nehajoisher
+ */
 public class VitalSigns {
 
-    private int bodyTemp;
-    private int pulseRate;
-    private int respRate;
-    private int bloodPressure;
+    private Float bp;
+    private Float bt;
+    private Float rr;
 
-    public VitalSigns(int bodyTemp,
-                      int pulseRate,
-                      int bloodPressure) {
 
-        this.bodyTemp = bodyTemp;
-        this.pulseRate = pulseRate;
-        this.bloodPressure = bloodPressure;
+    public VitalSigns(){
+        this.bp = 0.0f;
+        this.bt = 0.0f;
+        this.rr = 0.0f;
+    }
+    
+    public Float getBp() {
+        return bp;
     }
 
-    public int getBodyTemp() {
-        return bodyTemp;
+    public void setBp(Float bp) {
+        this.bp = bp;
     }
 
-    public void setBodyTemp(int bodyTemp) {
-        this.bodyTemp = bodyTemp;
+    public Float getBt() {
+        return bt;
     }
 
-    public int getPulseRate() {
-        return pulseRate;
+    public void setBt(Float bt) {
+        this.bt = bt;
     }
 
-    public void setPulseRate(int pulseRate) {
-        this.pulseRate = pulseRate;
+    public Float getRr() {
+        return rr;
     }
 
-    public int getRespRate() {
-        return respRate;
+    public void setRr(Float rr) {
+        this.rr = rr;
     }
-
-    public void setRespRate(int respRate) {
-        this.respRate = respRate;
-    }
-
-    public int getBloodPressure() {
-        return bloodPressure;
-    }
-
-    public void setBloodPressure(int bloodPressure) {
-        this.bloodPressure = bloodPressure;
-    }
+    
 }
