@@ -1,25 +1,20 @@
+/*
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
+ */
 package model;
 
-public class House {
+import java.util.ArrayList;
 
-    private String address;
-    private String aptNo;
-    private String state;
-    private Community community;
-    private City city;
-    private int pin;
-    
-    public House(String add, String apt, String st, Community community,City c, int pin){
-        
-        
-        this.address = add;
-        this.aptNo = apt;
-        this.state = st;
-        this.city = c;
-        this.community = community;
-        this.pin = pin;
-        
-    }
+/**
+ *
+ * @author neha
+ */
+public class House extends Community{
+    private String Address;
+    private String Area;
+    private int houseno;
+    private Community community; 
 
     public Community getCommunity() {
         return community;
@@ -29,43 +24,58 @@ public class House {
         this.community = community;
     }
 
+    public House() {
+        this.Address = "";
+        this.Area = "";
+        this.houseno = 0;
+        this.community = community;
+    }    
+    
+    
+    public int getHouseno() {
+        return houseno;
+    }
+
+    public void setHouseno(int houseno) {
+        this.houseno = houseno;
+    }
+
+    public Person getPerson() {
+        return person;
+    }
+
+    public void setPerson(Person person) {
+        this.person = person;
+    }
+    //private Community Community;
+    private Person person;
+    
+//    public Community getCommunity() {
+//        return Community;
+//    }
+//
+//    public void setCommunity(Community Community) {
+//        this.Community = Community;
+//    }
     public String getAddress() {
-        return address;
+        return Address;
     }
 
-    public void setAddress(String address) {
-        this.address = address;
+    public void setAddress(String Address) {
+        this.Address = Address;
     }
 
-    public String getAptNo() {
-        return aptNo;
+    public String getArea() {
+        return Area;
     }
 
-    public void setAptNo(String aptNo) {
-        this.aptNo = aptNo;
+    public void setArea(String Area) {
+        this.Area = Area;
     }
 
-    public String getState() {
-        return state;
-    }
-
-    public void setState(String state) {
-        this.state = state;
-    }
-
-    public City getCity() {
-        return city;
-    }
-
-    public void setCity(City city) {
-        this.city = city;
-    }
-
-    public int getPin() {
-        return pin;
-    }
-
-    public void setPin(int pin) {
-        this.pin = pin;
-    }
+    @Override  
+    public String toString(){
+        return Address;
+    }        
+    
 }
