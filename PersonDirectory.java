@@ -1,59 +1,51 @@
+/*
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
+ */
 package model;
-import model.Patient;
-import model.Person;
 
 import java.util.ArrayList;
-import java.util.Arrays;
+/**
+ *
+ * @author nehajoisher
+ */
+public class PersonDirectory{
+    private ArrayList<Person> allpeople;    
+    private House hse;
 
-public class PersonDirectory {
+    public ArrayList<Person> getAllpeople() {
+        return allpeople;
+    }
+
+    public void setAllpeople(ArrayList<Person> allpeople) {
+        this.allpeople = allpeople;
+    }
     
-    private ArrayList<Person> persons;
-
-    public PersonDirectory() {
-        persons = new ArrayList<>();
-    }
-
-    public Person addPerson(){
-      Person newp =new Person();
-      persons.add(newp);
-      return newp;
+    public void deletePerson(Person ms) {
+        allpeople.remove(ms);
+    }    
+    public PersonDirectory(){    
+        this.allpeople = new ArrayList<Person>();    
     }
     
-    
-    public void removePerson(Person person){
-        persons.add(person);
-    }
-
-
-    public ArrayList<Person> getPersons() {
-        return persons;
-    }
-
-    public void setPersons(ArrayList<Person> persons) {
-        this.persons = persons;
-    }
-
-    public Person searchUser(int txtId) {
-
-        for (Person v : persons) {
-    
-            if (v.getId() == txtId ) {
-              
-                return v;
+    public Person addNewPerson(){
+        Person newperson = new Person();
+        allpeople.add(newperson);
+        return newperson;
+    }          
+    public ArrayList<Person> searchperson(String city1)
+    {
+        ArrayList<Person> searchperson = new ArrayList();
+        for(Person city: allpeople)
+        {
+            if(city.getName().toLowerCase().equals(city1.toLowerCase()))
+            {
+           
+                searchperson.add(city);
+               
             }
         }
-        return null;
-    }
-
-    public void deletePerson(int id) {
-       
-        
-       for (Person p : persons) {
-            
-            if (p.getId() == id ) {
-                persons.remove(p);
-                return;
-            }
-        }
-    }
+        return searchperson;
+    }    
+    
 }
