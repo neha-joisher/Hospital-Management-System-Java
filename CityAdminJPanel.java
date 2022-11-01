@@ -10,7 +10,7 @@ import UI.CityAdminCreateJPanel;
 import UI.HospAdminCreateJPanel;
 /**
  *
- * @author neha
+ * @author nehajoisher
  */
 public class CityAdminJPanel extends javax.swing.JPanel {
 
