@@ -5,30 +5,33 @@
 package model;
 
 import java.util.ArrayList;
+
 /**
  *
  * @author nehajoisher
  */
-
 public class EncounterHistory {
-
-    private ArrayList<Encounter> encounterHistory;
-
-    public EncounterHistory() {
-        encounterHistory = new ArrayList<>();
+    private ArrayList<Encounter> Encdir;    
+    
+    public ArrayList<Encounter> getEncdir() {
+        return Encdir;
     }
 
-    public void addEncounter(Encounter encounter) {
-        encounterHistory.add(encounter);
+    public void setEncdir(ArrayList<Encounter> Encdir) {
+        this.Encdir = Encdir;
     }
 
-    public ArrayList<Encounter> getEncounterHistory() {
-        return encounterHistory;
-    }
 
-    public void setEncounterHistory(ArrayList<Encounter> encounterHistory) {
-        this.encounterHistory = encounterHistory;
-    }
+    public EncounterHistory(){
+        this.Encdir = new ArrayList<>();
+    }    
 
+    public Encounter addEncounter(){
+
+    Encounter newEnc = new Encounter();
+    Encdir.add(newEnc);
+    return newEnc;
+    
+    }          
+    
 }
-

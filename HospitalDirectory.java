@@ -4,45 +4,30 @@
  */
 package model;
 
-import model.Encounter;
-import model.Patient;
-import model.Person;
 import java.util.ArrayList;
 
 /**
  *
  * @author nehajoisher
  */
-public class HospitalDirectory {
-    
-    private ArrayList<Hospital> hospitalDirectory;
-    
-    
-    public HospitalDirectory(){
-        this.hospitalDirectory=new ArrayList<Hospital>  ();
-        
+public class HospitalDirectory extends City{
+    private ArrayList<Hospital> hospdir;
+
+    public ArrayList<Hospital> getHospdir() {
+        return hospdir;
     }
 
-    public ArrayList<Hospital> getHospitalDirectory() {
-        return hospitalDirectory;
-    }
-
-    public void setHospitalDirectory(ArrayList<Hospital> hospitalDirectory) {
-        this.hospitalDirectory = hospitalDirectory;
+    public void setHospdir(ArrayList<Hospital> hospdir) {
+        this.hospdir = hospdir;
     }
     
-    public Hospital addnewHospital(){
-         Hospital h=new Hospital();
-         hospitalDirectory.add(h);
-         return h; 
-    }
-
-    public void deleteHospital(Hospital selectedhosp) {
-        hospitalDirectory.remove(selectedhosp);
-        
-   
+    public HospitalDirectory() {
+        this.hospdir = new ArrayList<>();
     }
     
-    
-    
+    public Hospital addNewHosp(){
+        Hospital newHosp = new Hospital();
+        hospdir.add(newHosp);
+        return newHosp;
+    }      
 }

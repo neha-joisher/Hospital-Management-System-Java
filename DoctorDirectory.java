@@ -4,9 +4,6 @@
  */
 package model;
 
-import model.Encounter;
-import model.Patient;
-import model.Person;
 import java.util.ArrayList;
 
 /**
@@ -14,54 +11,48 @@ import java.util.ArrayList;
  * @author nehajoisher
  */
 public class DoctorDirectory {
+    private ArrayList<Doctor> alldoctor;
 
-
-
-    private ArrayList<Doctor> doctors = new ArrayList<>();
-
-    public void addDoctor(Doctor doctor) {
-        doctors.add(doctor);
+    
+    public DoctorDirectory(){
+        this.alldoctor = new ArrayList<Doctor>();
+    }
+    
+    public ArrayList<Doctor> getAlldoctor() {
+        return alldoctor;
     }
 
-    public ArrayList<Doctor> getDoctors() {
-        return doctors;
+    public void setAlldoctor(ArrayList<Doctor> alldoctor) {
+        this.alldoctor = alldoctor;
     }
 
-    public void setDoctors(ArrayList<Doctor> doctors) {
-        this.doctors = doctors;
-    }
 
-    public void encounterDoctor(int id, Encounter enc) {
+    public Doctor addNewDoc(){
 
-        for (Doctor v : doctors) {
+    Doctor newDoc = new Doctor();
+    alldoctor.add(newDoc);
+    return newDoc;
+    
+    }      
 
-            if (v.getId() == id) {
-                v.getEncounterHistory().addEncounter(enc);
-                return;
+    public void deleteDoc(Doctor ms) {
+        alldoctor.remove(ms);
+    }     
+
+    public ArrayList<Doctor> searchDoctor(String city1)
+    {
+        ArrayList<Doctor> searchDoctor = new ArrayList();
+        for(Doctor city: alldoctor)
+        {
+            if(city.getDocname().toLowerCase().equals(city1.toLowerCase()))
+            {
+           
+                searchDoctor.add(city);
+               
             }
         }
-        return;
-    }
-
-    public void deleteDoctor(int id) {
-        for (Doctor v : doctors) {
-
-            if (v.getId() == id) {
-                doctors.remove(v);
-                return;
-            }
-        }
-    }
-
-    public Doctor searchDoctor(int txtId) {
-
-        for (Doctor v : doctors) {
-            if (v.getId() == txtId) {
-                return v;
-            }
-        }
-        return null;
-
-    }
+        return searchDoctor;
+    }    
+    
+    
 }
-

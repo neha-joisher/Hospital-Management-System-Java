@@ -1,56 +1,58 @@
- /*
+/*
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
  */
 package model;
 
-import java.util.ArrayList;
-import java.util.Date;
-
 /**
  *
  * @author nehajoisher
  */
-public class Hospital {
-    
-    private String hospitalName;
-    private String city;
-    private String community;
-    
-    
+public class Hospital extends Community{
+    private String HospitalName;
+    private int HospitalId;
+    private String HospitalAdd;
+    private Community community;
 
- 
-    public String getHospitalName() {
-        return hospitalName;
-    }
-
-    public void setHospitalName(String hospitalName) {
-        this.hospitalName = hospitalName;
-    }
-
-    public String getCity() {
-        return city;
-    }
-
-    public void setCity(String city) {
-        this.city = city;
-    }
-
-    public String getCommunity() {
+    public Community getCommunity() {
         return community;
     }
 
-    public void setCommunity(String community) {
+    public void setCommunity(Community community) {
         this.community = community;
     }
     
-    
-    @Override
-    public String toString(){
-        return hospitalName; 
-    }
+    public Hospital(){
+    this.HospitalName = "";
+    this.HospitalId = 0;
 }
-         
+    public String getHospitalName() {
+        return HospitalName;
+    }
+
+    public void setHospitalName(String HospitalName) {
+        this.HospitalName = HospitalName;
+    }
+
+    public int getHospitalId() {
+        return HospitalId;
+    }
+
+    public void setHospitalId(int HospitalId) {
+        this.HospitalId = HospitalId;
+    }
+
+    public String getHospitalAdd() {
+        return HospitalAdd;
+    }
+
+    public void setHospitalAdd(String HospitalAdd) {
+        this.HospitalAdd = HospitalAdd;
+    }
+
+    @Override  
+    public String toString(){
+        return HospitalName;
+    }     
     
-
-
+}
