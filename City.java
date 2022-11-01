@@ -8,7 +8,7 @@ import java.util.ArrayList;
 
 /**
  *
- * @author neha
+ * @author nehajoisher
  */
 public class City{
 
