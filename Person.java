@@ -11,60 +11,45 @@ import java.util.Date;
  * @author nehajoisher
  */
 public class Person {
-
-    private String firstName;
-    private String lastName;
-    private House residence;
+    private String Name;
+    private int NameId;
     private String gender;
-    private String dob;
-    private int id;
+    private Date dob;
+    private Long contact;
+    private String designation;
+    private House house;
 
-
-    public Person(String firstName,
-            String lastName,
-            House residence,
-            String gender,
-            String dob, int Id) {
-
-        this.firstName = firstName;
-        this.lastName = lastName;
-        this.residence = residence;
-        this.gender = gender;
-        this.dob = dob;
-        this.id = id;
-
+    public Person(){
+        this.Name = "";
+        this.house = house;
+        
     }
-
-    Person() {
-        // throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
-    }
-
-    public String getFirstName() {
-        return firstName;
-    }
-
-    public void setFirstName(String firstName) {
-        this.firstName = firstName;
-    }
-
-    public String getLastName() {
-        return lastName;
-    }
-
-    public void setLastName(String lastName) {
-        this.lastName = lastName;
-    }
-
     
-
-    public House getResidence() {
-        return residence;
+    
+    public Date getDob() {
+        return dob;
     }
 
-    public void setResidence(House residence) {
-        this.residence = residence;
+    public void setDob(Date dob) {
+        this.dob = dob;
     }
 
+    public Long getContact() {
+        return contact;
+    }
+
+    public void setContact(Long contact) {
+        this.contact = contact;
+    }
+
+    public House getHouse() {
+        return house;
+    }
+
+    public void setHouse(House house) {
+        this.house = house;
+    }
+    
     public String getGender() {
         return gender;
     }
@@ -73,25 +58,32 @@ public class Person {
         this.gender = gender;
     }
 
-
-    public int getId() {
-        return id;
+    public String getDesignation() {
+        return designation;
     }
 
-    public void setId(int id) {
-        this.id = id;
+    public void setDesignation(String designation) {
+        this.designation = designation;
     }
 
-    public String getDob() {
-        return dob;
+    public String getName() {
+        return Name;
     }
 
-    public void setDob(String dob) {
-        this.dob = dob;
+    public void setName(String Name) {
+        this.Name = Name;
     }
 
-  
+    public int getNameId() {
+        return NameId;
+    }
+
+    public void setNameId(int NameId) {
+        this.NameId = NameId;
+    }
+    @Override  
+    public String toString(){
+        return Name;
+    }         
     
-    
-
 }
