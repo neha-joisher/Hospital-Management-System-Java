@@ -44,9 +44,6 @@ public class Community{
         this.city = city;
     }
 
-    //private Community communities;
-    //private City city;
-    //private House house;
 
     public Hospital getHospital() {
         return hospital;
@@ -143,7 +140,6 @@ public class Community{
         }else{
             return true;
         }
-        //return searchEmployee;
     }          
     
     @Override  
